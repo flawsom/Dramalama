@@ -1,19 +1,11 @@
-import styles from "./manga.module.css";
-import Image from "next/image";
-import SearchBar from "./searchBar";
+import MangaSearchBar from "./components/searchBar";
 
-export default async function Manga() {
+const MangaHomePage = async () => {
 	return (
-		<div className={styles.Main}>
-			<Image
-				src="/manga.png"
-				width={480}
-				height={200}
-				className={styles.MangaImage}
-				alt="Manga Intro Image"
-				priority
-			/>
-			<SearchBar />
-		</div>
+		<section className="pt-12">
+			<MangaSearchBar />
+		</section>
 	);
-}
+};
+
+export default MangaHomePage;
